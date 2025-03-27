@@ -59,3 +59,29 @@ model VerificationToken {
 
     @@unique([identifier, token])
 }
+
+model Album {
+    id           String @id @default(cuid())
+    slug         String @unique
+    title        String
+    description  String?
+    coverPhotoId String?
+    isPublic     Boolean @default(false)
+    date         DateTime
+    photos       Photo[]
+
+    @@index([slug])
+}
+
+model Photo {
+    id          String @id @default(cuid())
+    fileName    String // Original Filename
+    storageKey  String // Storage Key in S3
+    description String?
+    width       Int
+    height      Int
+    size        Int // File size in bytes
+    format      String // jpg, png, etc.
+    date        DateTime
+    albums      Album[]
+}

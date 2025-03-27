@@ -16,7 +16,6 @@ const navItems = [
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const session = await auth()
-  console.log(session)
 
   return (
     <SessionProvider session={session}>

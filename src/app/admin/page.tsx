@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { auth } from "~/server/auth";
 
+import { CreateAlbumForm } from "~/components/admin";
+
 export default async function Admin() {
     // TODO: This only checks if you're logged in
     // We still need to iron out how the whole instance admin thing works
@@ -10,6 +12,6 @@ export default async function Admin() {
     }
 
     return (
-        <p>Welcome to the super secret admin page!</p>
+        <CreateAlbumForm />
     )
 }
