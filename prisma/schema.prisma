@@ -74,7 +74,7 @@ model Album {
 }
 
 model Photo {
-    id          String @id @default(cuid())
+    id          String @id // CUID's generated manually
     fileName    String // Original Filename
     storageKey  String // Storage Key in S3
     description String?

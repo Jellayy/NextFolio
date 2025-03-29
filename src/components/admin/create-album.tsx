@@ -3,9 +3,9 @@
 import { Description, Field, FieldGroup, Fieldset, Label, Legend } from "~/components/catalyst/fieldset";
 import { Input } from "~/components/catalyst/input";
 import { Text } from "~/components/catalyst/text";
-import { Textarea } from "./catalyst/textarea";
-import { Checkbox, CheckboxField } from "./catalyst/checkbox";
-import { Button } from "./catalyst/button";
+import { Textarea } from "../catalyst/textarea";
+import { Checkbox, CheckboxField } from "../catalyst/checkbox";
+import { Button } from "../catalyst/button";
 
 import { useActionState } from "react";
 
